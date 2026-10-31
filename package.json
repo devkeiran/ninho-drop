@@ -1,8 +1,8 @@
 {
   "name": "edge-drop",
   "version": "0.4.0",
-  "description": "Edge-Drop — a clipboard manager that lives on the left edge of your screen and expands on hover.",
-  "author": "Edge-Drop",
+  "description": "Ninho Drop — uma prateleira para a área de transferência na borda da tela.",
+  "author": "Ninho Drop contributors",
   "license": "Apache-2.0",
   "private": true,
   "main": "out/main/index.js",
@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "electron-vite dev",
     "build": "electron-vite build",
-    "build:portable": "npm run build && electron-builder --win portable --x64 --publish never -c.extraMetadata.buildTarget=portable -c.portable.artifactName=Edge-Drop-Portable-${version}.${ext}",
+    "build:portable": "npm run build && electron-builder --win portable --x64 --publish never -c.extraMetadata.buildTarget=portable -c.portable.artifactName=Ninho-Drop-Portable-${version}.${ext}",
     "build:github": "npm run build && electron-builder --win nsis -c.extraMetadata.buildTarget=github",
     "build:store": "npm run build && electron-builder --win appx -c.extraMetadata.buildTarget=store",
     "build:msix": "npm run build && electron-builder --win appx -c.extraMetadata.buildTarget=store",
@@ -25,7 +25,7 @@
   },
   "build": {
     "appId": "com.edgedrop.app",
-    "productName": "Edge-Drop",
+    "productName": "Ninho Drop",
     "directories": {
       "output": "dist",
       "buildResources": "resources"
@@ -67,8 +67,8 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "Deepender25",
-      "repo": "Edge-Drop"
+      "owner": "devkeiran",
+      "repo": "ninho-drop"
     },
     "win": {
       "target": [
@@ -91,10 +91,10 @@
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
-      "shortcutName": "Edge-Drop",
+      "shortcutName": "Ninho Drop",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "artifactName": "Edge-Drop-Setup-${version}.${ext}"
+      "artifactName": "Ninho-Drop-Setup-${version}.${ext}"
     },
     "appx": {
       "identityName": "Deepender.EdgeDrop",

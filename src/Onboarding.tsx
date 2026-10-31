@@ -625,7 +625,7 @@ export function Onboarding() {
           <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1.5 1.5l7 7M8.5 1.5l-7 7" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" /></svg>
         </button>
 
-        <div className="ob-letters" ref={lettersRef} aria-label="edgedrop">
+        <div className="ob-letters" ref={lettersRef} aria-label="Ninho Drop">
           <svg viewBox="0 0 800 640" width="800" height="640">
             <defs>
               <mask id="ob-pen" maskUnits="userSpaceOnUse" x="0" y="0" width="800" height="640">

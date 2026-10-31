@@ -43,7 +43,7 @@ export function Header({ isHorizontal = false, itemCount, clearProps }: HeaderPr
     if (currentVersion) {
       patchSettings({ lastSeenChangelogVersion: currentVersion })
     }
-    window.open('https://www.edgedrop.app/changelog', '_blank')
+    window.open('https://github.com/devkeiran/ninho-drop/releases', '_blank')
   }
 
   const typeFilter = useStore((s) => s.typeFilter)

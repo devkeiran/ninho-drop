@@ -100,7 +100,7 @@ export function updateTrayIcon(): void {
 export function createTray(): Tray {
   const image = getTrayImage()
   tray = new Tray(image)
-  tray.setToolTip('Edge-Drop')
+  tray.setToolTip('Ninho Drop')
 
   // Register system theme change listener once
   if (!themeListenerRegistered) {
