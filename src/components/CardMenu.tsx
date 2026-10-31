@@ -429,6 +429,22 @@ function MenuList({ item }: { item: ClipboardItemDto }) {
       </div>
     )
   }
+  if (filePaths.length === 1) {
+    typeRows.push(
+      <MenuRow
+        key="open-file"
+        icon={<ExternalLinkIcon />}
+        label={t('menu.openFile')}
+        onSelect={() => {
+          close()
+          const failed = () => store().pushToast({ id: `open-${Date.now()}`, message: t('toast.openFileFailed'), tone: 'error' })
+          void edge.openFile(filePaths[0]).then((ok) => {
+            if (!ok) failed()
+          }).catch(failed)
+        }}
+      />
+    )
+  }
   if (filePaths.length > 0) {
     typeRows.push(
       <MenuRow

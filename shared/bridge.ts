@@ -71,6 +71,7 @@ export interface EdgeApi {
   setPreviewMode: (active: boolean) => Promise<void>
   pauseHotkey: (paused: boolean) => Promise<void>
   revealFile: (path: string) => Promise<boolean>
+  openFile: (path: string) => Promise<boolean>
   minimizeWindow: () => Promise<void>
   focusWindow: (focusable?: boolean) => Promise<void>
   getDisplays: () => Promise<import('./types').DisplayInfo[]>

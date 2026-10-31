@@ -32,6 +32,7 @@ import { toUnpackagedFilePath, toUnpackagedFilePaths } from '../store/paths'
 import { isPasteableEmoji } from '../../shared/emoji'
 import { emojiAssetDir, readEmojiBatch, resolveIconAsset } from './imageProtocol'
 import { saveItemImages } from './saveImages'
+import { openLocalPath } from './openLocalPath'
 
 export { isStoreBuild }
 
@@ -233,6 +234,8 @@ export function registerIpc(): void {
     console.log('[IPC] app:quit requested by renderer — quitting application')
     app.quit()
   })
+
+  handle('file:open', (filePath) => openLocalPath(filePath))
 
   handle('file:reveal', (filePath) => {
     if (isExistingFilePath(filePath)) {

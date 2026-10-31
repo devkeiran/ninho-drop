@@ -217,6 +217,7 @@ const api = {
   setPreviewMode: (active: boolean) => invoke('window:set-preview-mode', active),
   pauseHotkey: (paused: boolean) => invoke('hotkey:pause', paused),
   revealFile: (path: string) => invoke('file:reveal', path),
+  openFile: (path: string) => invoke('file:open', path),
   minimizeWindow: () => invoke('window:minimize'),
   focusWindow: (focusable?: boolean) => invoke('window:focus', focusable),
   setInternalDrag: (active: boolean) => { setInternalDragState(active) },

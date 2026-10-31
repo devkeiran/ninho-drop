@@ -143,6 +143,7 @@ export interface InvokeMap {
 
   /** Reveal a file in native File Explorer / Finder. */
   'file:reveal': { args: [path: string]; result: boolean }
+  'file:open': { args: [path: string]; result: boolean }
 
   /** Get the list of connected displays. */
   'displays:list': { args: []; result: import('./types').DisplayInfo[] }
